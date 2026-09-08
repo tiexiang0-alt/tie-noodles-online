@@ -12,17 +12,19 @@
     <link rel="icon" type="image/png" href="/site-icon.png" />
     <link rel="apple-touch-icon" href="/site-icon.png" />
     <link rel="stylesheet" href="/retail.css" />
-    <link rel="stylesheet" href="/payment-enhancements.css" />
+    <script defer src="/retail.js"></script>
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="notice">
       Australian online retail · Orders usually dispatched within 1–7 business
       days
     </div>
-    <nav class="nav wrap">
+    <header class="site-header">
+    <nav class="nav wrap" aria-label="Main navigation">
       <a class="brand" href="#top"
-        ><img src="/site-icon.png" alt="XIANG TIE lamb logo" />
+        ><img src="/site-icon.png" alt="" width="44" height="44" />
         <div>
           <strong>XIANG TIE</strong><small>Online & market retail</small>
         </div></a
@@ -32,12 +34,24 @@
         ><a href="#fulfilment">Delivery</a><a href="#contact">Contact</a
         ><a class="pill" href="#payment">Pay securely</a>
       </div>
+      <details class="mobile-menu">
+        <summary>Menu</summary>
+        <nav aria-label="Mobile navigation">
+          <a href="#products">Products</a>
+          <a href="#channels">Where we sell</a>
+          <a href="#fulfilment">Delivery</a>
+          <a href="#contact">Contact</a>
+          <a href="/policies/">Customer policies</a>
+          <a href="#payment">Pay securely →</a>
+        </nav>
+      </details>
     </nav>
-    <main>
+    </header>
+    <main id="main-content">
       <section class="hero wrap" id="top">
         <div class="hero-copy">
           <div class="eyebrow">Everyday retail · Western Australia</div>
-          <h1>Useful goods,<br />chosen with care.</h1>
+          <h1>Useful goods.<br />Chosen<br />with <em>care.</em></h1>
           <p>
             We sell kitchenware, household items, lifestyle products and general
             consumer goods through our online channels, with in-person market
@@ -47,18 +61,21 @@
             <a
               class="button button-dark"
               href="https://shop.tiktok.com/view/product/1737351302470206471?region=MY&amp;locale=en"
-              >View our TikTok Shop</a
+              >Shop on TikTok <span aria-hidden="true">↗</span></a
             ><a class="button button-light" href="#products"
               >Browse categories</a
             >
           </div>
+          <span class="hero-note">Kitchen · Home · Everyday living</span>
         </div>
-        <div class="hero-media">
+        <figure class="hero-media">
           <img
             src="/retail-hero.png"
-            alt="A representative assortment of kitchenware and household goods"
+            alt="Ceramic jars, wooden kitchen utensils and everyday home essentials"
+            width="1774" height="887" fetchpriority="high" decoding="async"
           />
-        </div>
+          <figcaption>Everyday essentials · Representative assortment</figcaption>
+        </figure>
       </section>
       <div class="trust wrap">
         <div>
@@ -78,7 +95,7 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">What we sell</div>
-            <h2>Everyday retail<br />categories</h2>
+            <h2>A place in your<br />everyday.</h2>
           </div>
           <p>
             Our range changes according to availability. Exact product
@@ -88,7 +105,7 @@
         </div>
         <div class="category-grid">
           <article class="card">
-            <div class="icon">⌁</div>
+            <span class="category-number" aria-hidden="true">01</span>
             <h3>Kitchenware & dining</h3>
             <p>
               Practical utensils, preparation tools, storage solutions and
@@ -97,7 +114,7 @@
             <small>CURRENT RANGE</small>
           </article>
           <article class="card">
-            <div class="icon">⌂</div>
+            <span class="category-number" aria-hidden="true">02</span>
             <h3>Household essentials</h3>
             <p>
               Useful home organisation, cleaning and general household products
@@ -106,7 +123,7 @@
             <small>GENERAL GOODS</small>
           </article>
           <article class="card">
-            <div class="icon">○</div>
+            <span class="category-number" aria-hidden="true">03</span>
             <h3>Lifestyle products</h3>
             <p>
               Affordable personal and lifestyle accessories, seasonal items and
@@ -131,6 +148,7 @@
           </div>
           <div class="channel-grid">
             <article class="card">
+              <div class="channel-label"><span>ONLINE MARKETPLACE</span><span aria-hidden="true">↗</span></div>
               <h3>TikTok Shop</h3>
               <p>
                 View an active product listing, current price and platform
@@ -142,6 +160,7 @@
               >
             </article>
             <article class="card">
+              <div class="channel-label"><span>ONLINE MARKETPLACE</span><span aria-hidden="true">↗</span></div>
               <h3>eBay Store</h3>
               <p>
                 XIANG TIE also sells through eBay. Contact us if you need the
@@ -152,6 +171,7 @@
               >
             </article>
             <article class="card coming">
+              <div class="channel-label"><span>WESTERN AUSTRALIA</span><span aria-hidden="true">↗</span></div>
               <h3>Market Stall</h3>
               <p>
                 In-person retail trading in Western Australia is planned. Dates
@@ -162,7 +182,7 @@
           </div>
         </div>
       </section>
-      <section class="section wrap payment payment-refined" id="payment">
+      <section class="section wrap payment" id="payment">
         <div class="payment-copy">
           <div class="eyebrow">Secure online payment</div>
           <h2>Pay with confidence.</h2>
@@ -171,16 +191,16 @@
             details with XIANG TIE. Stripe securely processes eligible card and
             wallet payments. We do not store card details.
           </p>
-          <div class="payment-points">
-            <span>✓ Secure Stripe checkout</span
-            ><span>✓ Amount shown before confirmation</span
-            ><span>✓ Receipt provided after payment</span>
-          </div>
+          <ul class="payment-points">
+            <li>Secure Stripe checkout</li>
+            <li>Amount shown before confirmation</li>
+            <li>Receipt provided after payment</li>
+          </ul>
           <p class="descriptor">
             <strong>Statement descriptor:</strong> TIE YI XIANG
           </p>
         </div>
-        <div class="payment-box payment-box-refined">
+        <div class="payment-box">
           <div class="payment-box-head">
             <div>
               <small>ONLINE CHECKOUT</small>
@@ -221,7 +241,7 @@
           </div>
           <div class="steps">
             <div class="step">
-              <span>1</span>
+              <span>01</span>
               <h3>Order confirmed</h3>
               <p>
                 You receive confirmation of the item, amount and delivery
@@ -229,7 +249,7 @@
               </p>
             </div>
             <div class="step">
-              <span>2</span>
+              <span>02</span>
               <h3>Dispatched in 1–7 business days</h3>
               <p>
                 Available stock is prepared and dispatched. Tracking is supplied
@@ -237,7 +257,7 @@
               </p>
             </div>
             <div class="step">
-              <span>3</span>
+              <span>03</span>
               <h3>Support after delivery</h3>
               <p>
                 Contact us about damaged, faulty, incorrect or missing items so
