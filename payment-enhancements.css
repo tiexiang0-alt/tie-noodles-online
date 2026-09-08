@@ -1,0 +1,13 @@
+.payment-refined{gap:56px}
+.payment-points{display:grid;gap:10px;margin:24px 0;color:#38584f;font-size:13px;font-weight:650}
+.descriptor{margin-top:28px;font-size:13px}
+.payment-box-refined{padding:24px;overflow:hidden}
+.payment-box-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.payment-box-head small{display:block;color:var(--orange);font-size:10px;font-weight:800;letter-spacing:.14em;margin-bottom:7px}
+.payment-box-head h3{font-size:21px;margin:0}
+.secure-badge{background:var(--sage);color:var(--forest);border-radius:999px;padding:7px 11px;font-size:11px;font-weight:800}
+.stripe-widget{width:100%;max-width:430px;margin:18px auto 0;text-align:center}
+.stripe-widget stripe-buy-button{display:block;width:100%}
+.payment-fallback{margin-top:16px;padding-top:15px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:11px}
+.payment-fallback a{color:var(--forest);font-weight:750;text-underline-offset:3px}
+@media(max-width:820px){.payment-box-refined{padding:18px}.stripe-widget{max-width:100%}}
