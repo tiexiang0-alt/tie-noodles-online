@@ -11,14 +11,13 @@
     <link rel="stylesheet" href="/retail.css" />
     <link rel="stylesheet" href="/payment-enhancements.css" />
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-    <script defer src="/shop.js"></script>
   </head>
   <body>
     <div class="notice">Australian retail · One-time prepaid orders · Dispatched within 1–7 business days</div>
     <nav class="nav wrap">
       <a class="brand" href="#top"><img src="/site-icon.png" alt="XIANG TIE lamb logo" /><div><strong>XIANG TIE</strong><small>Online & market retail</small></div></a>
       <div class="links">
-        <a href="#shop">Shop</a><a href="#order-flow">How to order</a><a href="#channels">Sales channels</a><a href="/policies/">Policies</a><a href="#contact">Contact</a><a class="pill" href="#order">Order <span class="cart-count" aria-label="items in order">0</span></a>
+        <a href="#shop">Shop</a><a href="#order-flow">How to order</a><a href="#channels">Sales channels</a><a href="/policies/">Policies</a><a href="#contact">Contact</a><a class="pill" href="#shop">Buy online</a>
       </div>
     </nav>
     <main>
@@ -26,7 +25,7 @@
         <div class="hero-copy">
           <div class="eyebrow">Direct online retail · Western Australia</div>
           <h1>Useful goods,<br />chosen with care.</h1>
-          <p>Shop kitchenware, household essentials, lifestyle products and everyday goods directly from XIANG TIE. Review your order on this website, receive our confirmation, then make a secure one-time payment through Stripe.</p>
+          <p>Shop kitchenware, household essentials, lifestyle products and everyday goods directly from XIANG TIE. Choose a product and pay immediately through its secure Stripe checkout.</p>
           <div class="actions"><a class="button button-dark" href="#shop">Shop online</a><a class="button button-light" href="#order-flow">See how ordering works</a></div>
         </div>
         <div class="hero-media"><img src="/retail-hero.png" alt="Original still life representing kitchenware and household retail" /></div>
@@ -41,73 +40,55 @@
       <section class="section wrap shop" id="shop">
         <div class="section-head">
           <div><div class="eyebrow">Shop directly</div><h2>Featured online<br />catalogue</h2></div>
-          <p>Add products to your order below. Availability, exact product specifications, delivery charge and the final payable total are confirmed by XIANG TIE before payment.</p>
+          <p>Choose a product below to open its dedicated Stripe checkout. The product, quantity and full payable amount are shown before you confirm payment.</p>
         </div>
         <div class="product-grid">
-          <article class="product-card">
+          <article class="product-card" id="product-utensils">
             <div class="product-image"><img src="/product-utensils.jpg" alt="Neutral silicone cooking utensils with natural wooden handles" /><span>Kitchenware</span></div>
             <div class="product-body">
               <div class="product-meta"><small>SKU XT-KIT-001</small></div>
               <h3>Silicone Kitchen Utensil Set</h3>
               <p>A practical multi-piece cooking utensil set in a neutral finish with natural wooden handles. Hand washing recommended.</p>
               <ul><li>Multi-piece kitchen set</li><li>Neutral beige finish</li><li>For everyday food preparation</li></ul>
-              <div class="product-buy"><div><strong>AU$34.95</strong><small>incl. GST if applicable</small></div><button class="add-to-order" type="button" data-sku="XT-KIT-001" data-name="Silicone Kitchen Utensil Set" data-price="34.95">Add to order</button></div>
+              <div class="product-buy embedded-product-checkout"><div><strong>AU$34.95</strong><small>one-time payment</small></div><stripe-buy-button buy-button-id="buy_btn_1UGBEVPOZC1t2VPzdEE4FiTr" publishable-key="pk_live_51UDR4DPOZC1t2VPzkmCGmwYS6T2xv2a9H7nW4WgZjAjzeEu4ndrJ2ql314dub4plGBvPPRpobliSXJtIJH5SH36L00KUtg3tf0"></stripe-buy-button></div>
             </div>
           </article>
 
-          <article class="product-card">
+          <article class="product-card" id="product-storage">
             <div class="product-image"><img src="/product-storage.jpg" alt="Three clear stackable food storage containers with white lids" /><span>Home storage</span></div>
             <div class="product-body">
               <div class="product-meta"><small>SKU XT-HOM-002</small></div>
               <h3>3-Piece Food Storage Set</h3>
               <p>Three clear stackable containers with fitted white lids for pantry or refrigerator organisation.</p>
               <ul><li>Three assorted sizes</li><li>Clear bodies for easy viewing</li><li>Stackable household storage</li></ul>
-              <div class="product-buy"><div><strong>AU$29.95</strong><small>incl. GST if applicable</small></div><button class="add-to-order" type="button" data-sku="XT-HOM-002" data-name="3-Piece Food Storage Set" data-price="29.95">Add to order</button></div>
+              <div class="product-buy embedded-product-checkout"><div><strong>AU$29.95</strong><small>one-time payment</small></div><stripe-buy-button buy-button-id="buy_btn_1UGBF4POZC1t2VPzXmUvRwnP" publishable-key="pk_live_51UDR4DPOZC1t2VPzkmCGmwYS6T2xv2a9H7nW4WgZjAjzeEu4ndrJ2ql314dub4plGBvPPRpobliSXJtIJH5SH36L00KUtg3tf0"></stripe-buy-button></div>
             </div>
           </article>
 
-          <article class="product-card">
+          <article class="product-card" id="product-cleaning">
             <div class="product-image"><img src="/product-cleaning.jpg" alt="Three reusable cleaning cloths and a natural wood cleaning brush" /><span>Household</span></div>
             <div class="product-body">
               <div class="product-meta"><small>SKU XT-HOM-003</small></div>
-              <h3>Reusable Cleaning Cloth & Brush Set</h3>
+              <h3>Cleaning Cloth & Brush Set</h3>
               <p>A simple household set with three reusable textured cloths and one compact natural-wood cleaning brush.</p>
               <ul><li>Three reusable cloths</li><li>One compact cleaning brush</li><li>Assorted earth-tone colours</li></ul>
-              <div class="product-buy"><div><strong>AU$18.95</strong><small>incl. GST if applicable</small></div><button class="add-to-order" type="button" data-sku="XT-HOM-003" data-name="Reusable Cleaning Cloth & Brush Set" data-price="18.95">Add to order</button></div>
+              <div class="product-buy embedded-product-checkout"><div><strong>AU$18.95</strong><small>one-time payment</small></div><stripe-buy-button buy-button-id="buy_btn_1UGBFJPOZC1t2VPz7jIIqpw6" publishable-key="pk_live_51UDR4DPOZC1t2VPzkmCGmwYS6T2xv2a9H7nW4WgZjAjzeEu4ndrJ2ql314dub4plGBvPPRpobliSXJtIJH5SH36L00KUtg3tf0"></stripe-buy-button></div>
             </div>
           </article>
         </div>
-        <p class="image-disclosure">Product photography on this page is original catalogue artwork prepared for XIANG TIE. Images are representative; the exact colour, dimensions, materials and included pieces are stated in the written order confirmation before payment.</p>
-      </section>
-
-      <section class="order-section" id="order">
-        <div class="wrap order-layout">
-          <div>
-            <div class="eyebrow">Your direct order</div><h2>Review before<br />you pay.</h2>
-            <p>Build your order here, then email it to XIANG TIE. We will confirm stock, specifications, shipping and the final total. Only use the Stripe checkout after receiving that confirmation.</p>
-            <div class="order-assurance"><strong>No subscription or recurring charge</strong><span>Every online order is a single prepaid retail purchase.</span></div>
-          </div>
-          <div class="order-card" aria-live="polite">
-            <div class="order-card-head"><div><small>ORDER SUMMARY</small><h3>Your items</h3></div><button class="clear-order" type="button">Clear</button></div>
-            <div class="order-empty">Your order is empty. Add a product from the catalogue above.</div>
-            <div class="order-items"></div>
-            <div class="order-totals" hidden><div><span>Product subtotal</span><strong class="order-subtotal">AU$0.00</strong></div><small>Shipping and any applicable adjustments are confirmed before payment.</small></div>
-            <a class="button button-dark order-email disabled" href="#shop">Add a product to begin</a>
-            <small class="order-privacy">The order builder is stored only in this browser. Personal and delivery details are requested when you contact us.</small>
-          </div>
-        </div>
+        <p class="image-disclosure">Product photography on this page is original catalogue artwork prepared for XIANG TIE. Images are representative; check the product name, description, quantity and price shown in Stripe before paying.</p>
       </section>
 
       <section class="section wrap" id="order-flow">
         <div class="section-head">
           <div><div class="eyebrow">Ecommerce operation flow</div><h2>From product<br />to delivery</h2></div>
-          <p>This is a direct XIANG TIE sale. The order is prepared and confirmed on this website and by our support team; customers are not sent to an external marketplace to complete the purchase.</p>
+          <p>This is a direct XIANG TIE sale. Customers choose products on this website and complete a one-time payment through Stripe without emailing for confirmation.</p>
         </div>
         <div class="flow-steps">
-          <article><span>01</span><h3>Choose products</h3><p>Review the product name, SKU, description and displayed price.</p></article>
-          <article><span>02</span><h3>Submit the order</h3><p>Send your order list and delivery postcode directly to XIANG TIE.</p></article>
-          <article><span>03</span><h3>Receive confirmation</h3><p>We confirm stock, specifications, shipping, final amount and order reference.</p></article>
-          <article><span>04</span><h3>Pay once with Stripe</h3><p>Use the secure Stripe checkout only for the confirmed order amount.</p></article>
+          <article><span>01</span><h3>Choose a product</h3><p>Review the product name, SKU, description and displayed price.</p></article>
+          <article><span>02</span><h3>Open Stripe checkout</h3><p>Select the Stripe purchase button on the product you want to buy.</p></article>
+          <article><span>03</span><h3>Enter delivery details</h3><p>Choose quantity and provide the requested contact and Australian delivery information.</p></article>
+          <article><span>04</span><h3>Pay once</h3><p>Confirm the product and total, then complete the one-time Stripe payment.</p></article>
           <article><span>05</span><h3>Dispatch & support</h3><p>Orders are normally dispatched in 1–7 business days with support after delivery.</p></article>
         </div>
       </section>
@@ -124,17 +105,20 @@
 
       <section class="section wrap payment payment-refined" id="payment">
         <div class="payment-copy">
-          <div class="eyebrow">Secure one-time payment</div><h2>Pay only after<br />order confirmation.</h2>
-          <p>XIANG TIE will first confirm the products, quantities, delivery charge, final total and order reference. Stripe then securely processes eligible card and wallet payments. We do not store card details.</p>
-          <div class="payment-warning"><strong>Important</strong><span>Do not use this payment button until XIANG TIE has confirmed your order and payable amount.</span></div>
+          <div class="eyebrow">Secure one-time payment</div><h2>Choose, check<br />and pay directly.</h2>
+          <p>Each product has its own Stripe checkout. Stripe displays the selected product, quantity and total before payment and securely processes eligible card and wallet methods. XIANG TIE does not store complete card details.</p>
+          <div class="payment-warning"><strong>Before paying</strong><span>Check that the Stripe page shows the product and amount you selected. If anything is incorrect, stop and contact us.</span></div>
           <div class="payment-points"><span>✓ One-time prepaid retail order</span><span>✓ No membership, subscription or recurring billing</span><span>✓ Stripe receipt after successful payment</span></div>
           <p class="descriptor"><strong>Statement descriptor:</strong> TIE YI XIANG</p>
         </div>
         <div class="payment-box payment-box-refined">
-          <div class="payment-box-head"><div><small>STRIPE SECURE CHECKOUT</small><h3>Pay a confirmed order</h3></div><span class="secure-badge">Secure</span></div>
-          <p>Confirm that the Stripe page shows the agreed amount before you complete payment. If it does not match, stop and contact us.</p>
-          <div class="stripe-widget"><stripe-buy-button buy-button-id="buy_btn_1UDXjMPOZC1t2VPztHHiJwys" publishable-key="pk_live_51UDR4DPOZC1t2VPzkmCGmwYS6T2xv2a9H7nW4WgZjAjzeEu4ndrJ2ql314dub4plGBvPPRpobliSXJtIJH5SH36L00KUtg3tf0"></stripe-buy-button></div>
-          <div class="payment-fallback">Button not loading? <a href="https://buy.stripe.com/8x2fZj6NHbs12xC4KL04805">Open Stripe checkout directly</a></div>
+          <div class="payment-box-head"><div><small>STRIPE SECURE CHECKOUT</small><h3>Select your product</h3></div><span class="secure-badge">Secure</span></div>
+          <p>Open the dedicated checkout for the item you want. Each link is for a single prepaid retail purchase, not a subscription.</p>
+          <div class="payment-product-links">
+            <a href="#product-utensils"><span>Silicone Kitchen Utensil Set</span><strong>AU$34.95 →</strong></a>
+            <a href="#product-storage"><span>3-Piece Food Storage Set</span><strong>AU$29.95 →</strong></a>
+            <a href="#product-cleaning"><span>Cleaning Cloth & Brush Set</span><strong>AU$18.95 →</strong></a>
+          </div>
         </div>
       </section>
 
@@ -142,7 +126,7 @@
         <div class="wrap">
           <div class="section-head"><div><div class="eyebrow">Delivery & after-sales</div><h2>Clear support<br />after payment</h2></div><p>Available stock is normally dispatched within 1–7 business days. Tracking is supplied where supported by the selected carrier.</p></div>
           <div class="steps">
-            <div class="step"><span>1</span><h3>Payment matched</h3><p>We match the Stripe payment to the confirmed order reference and customer details.</p></div>
+            <div class="step"><span>1</span><h3>Payment received</h3><p>Stripe records the paid product, quantity and customer delivery details for fulfilment.</p></div>
             <div class="step"><span>2</span><h3>Dispatched in 1–7 days</h3><p>Goods are prepared and dispatched within 1–7 business days unless otherwise agreed before payment.</p></div>
             <div class="step"><span>3</span><h3>14-day return window</h3><p>Eligible unused, unopened and resalable non-perishable goods may be requested for return within 14 days of delivery.</p></div>
           </div>
