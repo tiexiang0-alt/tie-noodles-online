@@ -20,8 +20,18 @@
       "_framework-BgSIrAUN.js"
     ]
   },
+  "app/storefront.tsx": {
+    "file": "_next/static/chunks/storefront-Dqj3wc1z.js",
+    "name": "storefront",
+    "src": "app/storefront.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_framework-BgSIrAUN.js"
+    ]
+  },
   "node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "_next/static/chunks/layout-segment-context-CbfLLRmq.js",
+    "file": "_next/static/chunks/layout-segment-context-CGyb7KDn.js",
     "name": "layout-segment-context",
     "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -32,7 +42,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "_next/static/chunks/index-BEFb-wvG.js",
+    "file": "_next/static/chunks/index-C9CZ0jaq.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
@@ -43,7 +53,8 @@
     "dynamicImports": [
       "virtual:vinext-app-browser-entry",
       "node_modules/vinext/dist/shims/layout-segment-context.js",
-      "app/geo-language.tsx"
+      "app/geo-language.tsx",
+      "app/storefront.tsx"
     ]
   }
 }
